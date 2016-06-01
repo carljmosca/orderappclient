@@ -1,0 +1,44 @@
+<!--
+  Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<dom-module id="main-app">
+    <style>
+        :host {
+            display: block;
+        }
+    </style>
+
+    <template>
+
+        <paper-input label="Name" value="{{customerName}}"></paper-input>
+        <gold-email-input label="Email" value="{{email}}"></gold-email-input>
+
+        <paper-dropdown-menu label="Dinosaurs"  >
+            <paper-listbox id="ItemList" class="dropdown-content"
+                           selected="{{selectedMenuItem}}">
+                <paper-item>allosaurus</paper-item>
+                <paper-item>brontosaurus</paper-item>
+                <paper-item>carcharodontosaurus</paper-item>
+                <paper-item>diplodocus</paper-item>
+            </paper-listbox>
+        </paper-dropdown-menu>
+        <div>
+            <label id="OptionOneLabel" hidden="true"></label>
+            <select multiple="true" id="OptionOne" hidden="true">
+            </select>
+        </div>
+        <div>
+            <label id="OptionTwoLabel" hidden="true"></label>
+            <select multiple="true" id="OptionTwo" hidden="true">
+            </select>
+        </div>
+        <div>
+            <paper-button>
+                <iron-icon icon="favorite"></iron-icon>
+                Add
+            </paper-button>
+        </div>
+    </template>
+</dom-module>
